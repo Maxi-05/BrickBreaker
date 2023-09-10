@@ -1,0 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
+.score_card {
+  margin-left: 40px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 30px;
+}

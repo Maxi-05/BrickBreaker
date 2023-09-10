@@ -1,0 +1,7 @@
+.block {
+  width: 150px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: violet;
+  margin: 10px;
+}

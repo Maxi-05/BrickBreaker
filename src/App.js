@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Title from "./components/Title";
+import { useState } from "react";
+import Blocks from "./components/Blocks";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import End from "./components/End";
 function App() {
+  const [score, setScore] = useState(0);
+  const increment = () => {
+    setScore(score + 10);
+  };
+  const reset = () => {
+    setScore(0);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Title />
+        <Routes>
+          <Route
+            path="/"
+            element={<Blocks score={score} increment={increment} />}
+          />
+          <Route path="/end" element={<End score={score} reset={reset} />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 

@@ -1,0 +1,5 @@
+.blocks {
+  margin: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}

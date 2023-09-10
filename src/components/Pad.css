@@ -1,0 +1,11 @@
+.pad {
+  width: 150px;
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: violet;
+  margin: 10px;
+  position: absolute;
+  bottom: 12px;
+  left: 0px;
+}
